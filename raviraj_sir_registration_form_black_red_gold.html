@@ -363,7 +363,20 @@ function submitForm() {
   if (phone.length !== 10) {
     alert(' Valid 10-digit number enter karo!'); return;
   }
+const scriptURL = "https://script.google.com/macros/s/AKfycbxYdAmvjT4UPSrpEuD3eR7U5JJh3K470ivSnZym1tfjNftw6otP90smgUpy7Q5Of393UQ/exec";
 
+fetch(scriptURL, {
+  method: "POST",
+  body: new URLSearchParams({
+    timestamp: new Date(),
+    fullname: fullname,
+    phone: phone,
+    age: age,
+    gender: gender,
+    profession: prof,
+    district: district
+  })
+});
   var yourNumber = '918347281744';
 
   var msg = 'નમસ્તે! Raviraj Sir 🚀\nમને ડિજિટલ સ્કિલ અને ડિજિટલ માર્કેટિંગ માં રસ છે. કૃપા કરીને વિગતો શેર કરો.\n\n'
